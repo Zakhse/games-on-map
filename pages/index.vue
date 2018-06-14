@@ -16,6 +16,7 @@
                 <div class="location-images">
                     <img v-if="mapInModal.game1"
                          :src="mapInModal.game1"
+                         :class="{only: !mapInModal.game2}"
                          class="location-image">
                     <img v-if="mapInModal.game2"
                          :src="mapInModal.game2"
@@ -27,6 +28,7 @@
                 <div class="location-images">
                     <img v-if="mapInModal.real1"
                          :src="mapInModal.real1"
+                         :class="{only: !mapInModal.real2}"
                          class="location-image">
                     <img v-if="mapInModal.real2"
                          :src="mapInModal.real2"
@@ -116,12 +118,15 @@ export default {
                     justify-content: center;
                     height: 300px;
                     .location-image {
-                        width: 1px;
-                        flex-basis: 50%;
-                        object-fit: cover;
                         height: 100%;
+                        width: auto;
                         &:not(:last-child) {
                             margin-right: 10px;
+                        }
+                        &:not(.only) {
+                            width: 1px;
+                            flex-basis: 50%;
+                            object-fit: cover;
                         }
                     }
                 }
