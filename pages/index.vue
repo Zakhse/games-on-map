@@ -10,17 +10,6 @@
                     Игра — <b>{{ mapInModal.game }}</b>
                 </div>
                 <div class="images-header">
-                    Реальная локация — <b>{{ mapInModal.name }}</b>
-                </div>
-                <div class="location-images">
-                    <img v-if="mapInModal.real1"
-                         :src="mapInModal.real1"
-                         class="location-image">
-                    <img v-if="mapInModal.real2"
-                         :src="mapInModal.real2"
-                         class="location-image">
-                </div>
-                <div class="images-header">
                     Локация в игре
                     <template v-if="mapInModal.gameName"> — <b>{{ mapInModal.gameName }}</b></template>
                 </div>
@@ -31,6 +20,20 @@
                     <img v-if="mapInModal.game2"
                          :src="mapInModal.game2"
                          class="location-image">
+                </div>
+                <div class="images-header">
+                    Реальная локация — <b>{{ mapInModal.name }}</b>
+                </div>
+                <div class="location-images">
+                    <img v-if="mapInModal.real1"
+                         :src="mapInModal.real1"
+                         class="location-image">
+                    <img v-if="mapInModal.real2"
+                         :src="mapInModal.real2"
+                         class="location-image">
+                </div>
+                <div class="description">
+                    {{ mapInModal.description }}
                 </div>
             </template>
         </modal>
@@ -121,6 +124,12 @@ export default {
                             margin-right: 10px;
                         }
                     }
+                }
+                .description {
+                    margin-top: 1em;
+                    font-size: 20px;
+                    font-weight: 100;
+                    line-height: 1.5;
                 }
             }
         }
