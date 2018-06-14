@@ -86,7 +86,7 @@ const gtaV = [
         34.0510801,
         -118.2543526,
         'mazebank-1.jpg',
-        'mazebank-2.jpg',
+        'mazebank-2.jpeg',
         'mazebank-3.jpg',
         'mazebank-4.jpg',
         'Самое высокое здание в Лос-Сантосе',
